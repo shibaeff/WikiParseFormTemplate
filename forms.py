@@ -12,7 +12,7 @@ class Query(Form):
     link = TextField('Link:', validators=[validators.required()])
     write_n = TextField('Generated length: ', validators=[validators.required()])
     
-    describe = RadioField('Describe the entire article?', choices=[('Yes','Takes some time'),('No','ok')])
+    describe = RadioField('Describe the entire article?', choices=[('Takes some time', 'Yes'),('ok','No')])
  
  
 @app.route("/", methods=['GET', 'POST'])
